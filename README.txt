@@ -3,7 +3,7 @@
 Credits:
 
 	Demo Images:
-		Unsplash (unsplash.com)
+		Unsplash
 
 	Icons:
 		Font Awesome (fontawesome.io)

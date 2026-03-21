@@ -54,7 +54,7 @@ function resetBody(body) {
     // random starting angle
     body.quaternion.setFromAxisAngle(new CANNON.Vec3(random(1),random(1),random(1)), random(-180,180));
     // random impulse
-    body.applyLocalImpulse(new CANNON.Vec3(30,30,30), new CANNON.Vec3(random(-30,30),random(-30,30),random(-30,30)));
+    body.applyLocalImpulse(new CANNON.Vec3(15,15,15), new CANNON.Vec3(random(-15,15),random(-15,15),random(-15,15)));
     body.shapes[0].radius = 0.001;
     return body;
 }
@@ -94,7 +94,7 @@ self.onmessage = function(e) {
         spheres.push(body);
         scales[4*i + 0] = 0.001; // scale
         scales[4*i + 1] = 0; // age
-        scales[4*i + 2] = random(50,500); // life
+        scales[4*i + 2] = random(200,800); // life
         scales[4*i + 3] = 0; // velocity
         world.addBody(body);
     }
@@ -113,7 +113,7 @@ self.onmessage = function(e) {
         if (age>life) {
             scale = 0.001;
             age = 0;
-            life = random(50,500);
+            life = random(200,800);
             body = this.resetBody(body);
         }
         // set scale

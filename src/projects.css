@@ -1,0 +1,176 @@
+/* Projects page — overrides and additions */
+
+.projects-page main {
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+.proj-header {
+    padding: 4rem 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.back-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--c-primary);
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 1; text-decoration: none; }
+
+.proj-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--c-primary);
+    margin: 0.75rem 0 0.25rem;
+    line-height: 1.2;
+}
+
+.proj-sub {
+    font-size: 0.9rem;
+    color: var(--c-secondary);
+    opacity: 0.5;
+    margin: 0;
+}
+
+/* 2-column grid */
+.proj-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding-bottom: 4rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .proj-grid { grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.proj-card {
+    background: var(--c-tertiary);
+    backdrop-filter: saturate(180%) blur(40px);
+    -webkit-backdrop-filter: saturate(180%) blur(40px);
+    border-radius: 1.25rem;
+    padding: 1.25rem 1.4rem 1.1rem;
+    transition: background 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.proj-card:hover {
+    background: hsl(88, 25%, 13%, 0.7);
+}
+
+.proj-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.proj-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-primary);
+    text-decoration: none;
+}
+.proj-name:hover { text-decoration: underline; }
+
+.proj-date {
+    font-size: 0.72rem;
+    color: var(--c-secondary);
+    opacity: 0.45;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.proj-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--c-secondary);
+    margin: 0;
+    flex: 1;
+}
+
+.proj-desc strong {
+    color: var(--c-primary);
+    font-weight: 600;
+}
+
+.proj-desc a {
+    font-size: inherit;
+    font-weight: 600;
+}
+
+/* Tag pills */
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.25rem;
+}
+
+.proj-tags span {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-primary);
+    opacity: 0.6;
+    background: rgba(209, 197, 173, 0.08);
+    border: 1px solid rgba(209, 197, 173, 0.15);
+    border-radius: 100px;
+    padding: 0.15em 0.6em;
+}
+
+/* Wide GitHub CTA card */
+.proj-card--wide {
+    grid-column: 1 / -1;
+    padding: 1.75rem 1.75rem;
+}
+
+.proj-github-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--c-primary);
+    width: 100%;
+}
+
+.proj-github-cta:hover { text-decoration: none; }
+
+.proj-github-cta span:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    transition: letter-spacing 0.3s ease;
+}
+
+.proj-card--wide:hover .proj-github-cta span:first-child {
+    letter-spacing: 0.02em;
+}
+
+.proj-github-handle {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    font-weight: 400;
+}
+
+/* Footer on projects page */
+.projects-page footer {
+    display: block;
+    padding: 2rem 0 3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}

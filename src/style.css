@@ -188,6 +188,23 @@ main {
 }
 .no-js .intro { opacity: 1; }
 
+.intro-sub {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--c-secondary);
+    margin-top: 1rem;
+}
+
+.no-js .intro-sub { opacity: 1; }
+
+.loaded .intro-sub {
+    animation-name: fadeIn;
+    animation-duration: 2.2s;
+    animation-delay: .8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
 .loaded .intro {
     animation-name: fadeIn;
     animation-duration: 2.2s;
